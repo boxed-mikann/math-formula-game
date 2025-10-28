@@ -11,7 +11,7 @@ function App() {
 
   useEffect(() => {
     // Load stages data
-    fetch('/stages.json')
+    fetch('/math-formula-game/stages.json')
       .then(response => response.json())
       .then(data => setStages(data.stages))
       .catch(error => console.error('Failed to load stages:', error));
