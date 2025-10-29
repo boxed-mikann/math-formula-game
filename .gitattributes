@@ -1,0 +1,9 @@
+# Normalize line endings to LF to avoid false git diffs across Windows/Linux
+* text=auto eol=lf
+
+# Ensure shell scripts keep LF
+*.sh text eol=lf
+
+# Node lockfiles
+package-lock.json text eol=lf
+*** End Patch

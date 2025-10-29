@@ -32,3 +32,29 @@
 2. 数式の表示と入力欄、プレビュー機能の実装
 3. 正誤判定ロジック＆クリア画面
 4. 問題データの仮実装
+
+
+## 開発コンテナ（devcontainer）について
+
+このリポジトリには VS Code の devcontainer 構成が含まれており、開発環境をコンテナ内で統一して起動できます。追加ファイルは `.devcontainer/` 配下にあります。
+
+基本的な使い方:
+
+- VS Code でリポジトリを開く
+- コマンドパレットで「Remote-Containers: Reopen in Container」を実行
+- コンテナ初回ビルド後、`npm install` が自動で実行されます（`postCreateCommand`）
+- 開発サーバを起動するにはコンテナ内ターミナルで:
+
+```powershell
+npm run dev -- --host
+```
+-- --host オプションはコンテナ外部からのアクセスを可能にします。(重要：詰まりがちなポイント)
+
+Vite のデフォルトポート 5173 をフォワードしています。ブラウザからは通常 `http://localhost:5173` でアクセスできます。
+
+注意点（GitHub Pages への影響）:
+
+- `.devcontainer/` のファイルは開発時のメタ情報であり、ビルド出力やデプロイ設定を直接上書きするものではありません。
+- GitHub Pages へのデプロイは `vite build` の出力（`dist/` 等）や GitHub Actions 等で行われます。devcontainer を追加しても自動的に Pages の振る舞いは変わらないため、Pages 側の設定や Actions に明示的な変更がない限り影響はありません。
+
+何か問題があれば devcontainer の設定を調整します（例えば Node バージョンの変更や追加ツールのインストール等）。
