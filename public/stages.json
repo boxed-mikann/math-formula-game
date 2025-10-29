@@ -1,1 +1,166 @@
-{"stages":[{"stage":1,"problems":[{"id":1,"question":"What is 2 + 2?","answer":4},{"id":2,"question":"What is 3 + 5?","answer":8},{"id":3,"question":"What is 10 - 7?","answer":3},{"id":4,"question":"What is 6 / 2?","answer":3},{"id":5,"question":"What is 5 * 3?","answer":15}]},{"stage":2,"problems":[{"id":6,"question":"What is 8 - 3?","answer":5},{"id":7,"question":"What is 9 + 1?","answer":10},{"id":8,"question":"What is 12 / 4?","answer":3},{"id":9,"question":"What is 3 * 4?","answer":12},{"id":10,"question":"What is 15 - 9?","answer":6}]},{"stage":3,"problems":[{"id":11,"question":"What is 7 + 8?","answer":15},{"id":12,"question":"What is 20 - 4?","answer":16},{"id":13,"question":"What is 5 + 5?","answer":10},{"id":14,"question":"What is 36 / 6?","answer":6},{"id":15,"question":"What is 9 * 2?","answer":18}]}]}
+{
+  "stages": [
+    {
+      "id": 1,
+      "title": "基本の記法",
+      "description": "上付き文字・下付き文字など基本的な記法を学びます",
+      "difficulty": 1,
+      "unlocked": true,
+      "problems": [
+        {
+          "id": 1,
+          "displayLatex": "x^2",
+          "correctAnswer": "x^2",
+          "acceptableAnswers": ["x^{2}"],
+          "hint": "べき乗は ^ 記号を使います。例: x^2",
+          "category": "superscript",
+          "explanation": "^ の後に数字を書くと上付き文字(べき乗)になります"
+        },
+        {
+          "id": 2,
+          "displayLatex": "x_1",
+          "correctAnswer": "x_1",
+          "acceptableAnswers": ["x_{1}"],
+          "hint": "下付き文字は _ 記号を使います",
+          "category": "subscript",
+          "explanation": "_ の後に数字を書くと下付き文字になります"
+        },
+        {
+          "id": 3,
+          "displayLatex": "x^2 + y^2 = 1",
+          "correctAnswer": "x^2 + y^2 = 1",
+          "acceptableAnswers": ["x^{2} + y^{2} = 1", "x^2+y^2=1", "x^{2}+y^{2}=1"],
+          "hint": "複数のべき乗を組み合わせます",
+          "category": "superscript",
+          "explanation": "スペースは無視されるので、見やすく書けます"
+        },
+        {
+          "id": 4,
+          "displayLatex": "a_i",
+          "correctAnswer": "a_i",
+          "acceptableAnswers": ["a_{i}"],
+          "hint": "下付き文字に変数も使えます",
+          "category": "subscript",
+          "explanation": "下付き文字には数字だけでなく変数も使えます"
+        },
+        {
+          "id": 5,
+          "displayLatex": "x^{10}",
+          "correctAnswer": "x^{10}",
+          "acceptableAnswers": [],
+          "hint": "2桁以上の数字は {} で囲む必要があります",
+          "category": "superscript_braces",
+          "explanation": "複数文字のべき乗は中括弧で囲みます: x^{10}"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "分数・べき乗",
+      "description": "分数記法と複雑なべき乗表現を学びます",
+      "difficulty": 2,
+      "unlocked": false,
+      "problems": [
+        {
+          "id": 6,
+          "displayLatex": "\\frac{1}{2}",
+          "correctAnswer": "\\frac{1}{2}",
+          "acceptableAnswers": [],
+          "hint": "分数は \\frac{分子}{分母} を使います",
+          "category": "fraction",
+          "explanation": "分数は\\fracコマンドで表現します"
+        },
+        {
+          "id": 7,
+          "displayLatex": "\\frac{a}{b}",
+          "correctAnswer": "\\frac{a}{b}",
+          "acceptableAnswers": [],
+          "hint": "変数の分数も同じ書き方です",
+          "category": "fraction",
+          "explanation": "分子と分母には変数も使えます"
+        },
+        {
+          "id": 8,
+          "displayLatex": "\\frac{x+1}{y-1}",
+          "correctAnswer": "\\frac{x+1}{y-1}",
+          "acceptableAnswers": ["\\frac{x + 1}{y - 1}"],
+          "hint": "複雑な式も {} 内に書きます",
+          "category": "fraction",
+          "explanation": "分子・分母には複雑な式も書けます"
+        },
+        {
+          "id": 9,
+          "displayLatex": "x^{2y}",
+          "correctAnswer": "x^{2y}",
+          "acceptableAnswers": [],
+          "hint": "べき乗部分が複雑な場合は {} で囲みます",
+          "category": "superscript_braces",
+          "explanation": "べき乗部分が複数文字の場合は必ず{}で囲みます"
+        },
+        {
+          "id": 10,
+          "displayLatex": "\\frac{x^2}{y^2}",
+          "correctAnswer": "\\frac{x^2}{y^2}",
+          "acceptableAnswers": ["\\frac{x^{2}}{y^{2}}"],
+          "hint": "分数とべき乗を組み合わせます",
+          "category": "fraction_power",
+          "explanation": "分数の中でもべき乗が使えます"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "関数・記号",
+      "description": "ルート、シグマ、積分などの高度な記法を学びます",
+      "difficulty": 3,
+      "unlocked": false,
+      "problems": [
+        {
+          "id": 11,
+          "displayLatex": "\\sqrt{2}",
+          "correctAnswer": "\\sqrt{2}",
+          "acceptableAnswers": [],
+          "hint": "平方根は \\sqrt{} を使います",
+          "category": "sqrt",
+          "explanation": "平方根は\\sqrtコマンドで表現します"
+        },
+        {
+          "id": 12,
+          "displayLatex": "\\sqrt{x^2+y^2}",
+          "correctAnswer": "\\sqrt{x^2+y^2}",
+          "acceptableAnswers": ["\\sqrt{x^{2}+y^{2}}", "\\sqrt{x^2 + y^2}"],
+          "hint": "ルートの中にも数式を書けます",
+          "category": "sqrt",
+          "explanation": "ルートの中には複雑な式も書けます"
+        },
+        {
+          "id": 13,
+          "displayLatex": "\\sum_{i=1}^{n} i",
+          "correctAnswer": "\\sum_{i=1}^{n} i",
+          "acceptableAnswers": ["\\sum_{i=1}^n i"],
+          "hint": "シグマは \\sum_{下}^{上} を使います",
+          "category": "sum",
+          "explanation": "総和記号は\\sumで、下付き・上付きで範囲を指定します"
+        },
+        {
+          "id": 14,
+          "displayLatex": "\\int_{0}^{1} x \\, dx",
+          "correctAnswer": "\\int_{0}^{1} x \\, dx",
+          "acceptableAnswers": ["\\int_0^1 x \\, dx", "\\int_{0}^{1} x dx"],
+          "hint": "積分は \\int_{下}^{上} を使います",
+          "category": "integral",
+          "explanation": "積分記号は\\intで、範囲を下付き・上付きで指定します"
+        },
+        {
+          "id": 15,
+          "displayLatex": "\\lim_{x \\to \\infty} f(x)",
+          "correctAnswer": "\\lim_{x \\to \\infty} f(x)",
+          "acceptableAnswers": ["\\lim_{x\\to\\infty} f(x)"],
+          "hint": "極限は \\lim_{式} を使います",
+          "category": "limit",
+          "explanation": "極限は\\limで、条件を下付きで指定します"
+        }
+      ]
+    }
+  ]
+}
